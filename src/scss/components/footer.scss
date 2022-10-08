@@ -1,1 +1,109 @@
 // Styles for footer
+.footer {
+  background-color: #1A242F;
+  padding-top: clamp(1.875rem, -0.125rem + 10vw, 8.75rem);
+  // .footer__container
+  &__container {
+  }
+  // .footer__main
+  &__main {
+    padding-bottom: clamp(1.875rem, 0.784rem + 5.45vw, 5.625rem);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(1.875rem, -14.494rem + 26.19vw, 8.75rem);
+    justify-items: center;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  // .footer__block
+  &__block {
+    @media (max-width: 992px) {
+      grid-column: 1/5;
+      &:not(:first-child) {
+        grid-row: 2/3;
+        grid-column: auto;
+        margin-top: 10px;
+      }
+    }
+  }
+  // .footer__link
+  &__link {
+  }
+  // .footer__text
+  &__text {
+    margin: 22px 0 32px;
+    @media (min-width: 992px) {
+      width: 340px;
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: 600px) {
+      justify-content: center;
+    }
+  }
+  // .footer__soaial
+  &__social {
+    svg {
+      fill: #555E68;
+      transition: all .2s;
+    }
+    @media (any-hover) {
+      &:hover {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  // .footer__copyright
+  &__copyright {
+    padding: 15px;
+    border-top: 1px solid #D6D6D6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 760px) {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+  }
+}
+.links-footer {
+  // .links-footer__header
+  &__header {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 11px;
+  }
+  // .links-footer__list
+  &__list {
+  }
+  // .links-footer__item
+  &__item {
+  }
+  // .links-footer__link
+  &__link {
+    transition: all .2s;
+    white-space: nowrap;
+    @media (any-hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

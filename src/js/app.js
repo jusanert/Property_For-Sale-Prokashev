@@ -123,5 +123,4 @@ import * as modules from './components/modules.js'
 
 /*===========================================*/
 //---Основной скрипт
-
 import './components/script.js'

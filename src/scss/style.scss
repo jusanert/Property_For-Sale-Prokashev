@@ -5,7 +5,7 @@
 
 /*---ШРИФТЫ---*/
 @import 'components/fonts';
-//&display=swap
+// &display=swap
 
 //---Иконочный шрифт---*/
 // @import 'components/icons';
@@ -18,19 +18,22 @@
 
 /*---CSS ПЕРЕМЕННЫЕ---*/
 :root {
-	--bg-color: #fff;
-	--text-color: #000;
+	--color-bg: #121B25;
+	--color-text: #D6D6D6;
+  --color-accent: #1AA090;
+  --color-title: #fff;
 }
 
 /*---ЦВЕТОВАЯ СХЕМА И СТРАНИЦА---*/
 @import 'components/color-scheme';
 
 body {
-	font-family: $fontFamily, sans-serif;
-	font-weight: $fontWeight;
+	font-family: Worksans, sans-serif;
+	font-weight: 400;
 	transition: background-color .2s, color .2s;
-	background-color: var(--bg-color);
-	color: var(--text-color);
+	background-color: var(--color-bg);
+	color: var(--color-text);
+  position: relative;
 
 	// Блокировка скролла
 	&._locked {
@@ -45,15 +48,15 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	// Для слайдеров
+	Для слайдеров
 	> * {
 		min-width: 0;
 	}
 }
 
 [class*="__container"] {
-	@if ($maxWidthContainer > 0) {
-		max-width: $containerWidth + px;
+	@if ($containerWidth > 0) {
+		max-width: $maxWidthContainer + px;
 	} @else {
 		width: 100%;
 	}
@@ -83,7 +86,7 @@ body {
 // @import 'elements/spollers';
 
 //---SWIPER
-// @import 'elements/swiper';
+@import 'elements/swiper';
 
 //---RANGE INPUT
 // @import 'elements/range';
@@ -110,8 +113,14 @@ body {
 	flex: 1 1 auto;
 }
 
+@import "page/hero.scss";
+@import "page/featured.scss";
+@import "page/popular.scss";
+@import "page/why.scss";
+@import "page/reviews.scss";
+@import "page/gallery.scss";
+@import "page/begin.scss";
+
 //===========================================//
 /*---Footer---*/
 @import "components/footer";
-
-//===========================================//

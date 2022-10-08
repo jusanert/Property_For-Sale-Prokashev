@@ -1,0 +1,26 @@
+.featured {
+  padding-top: clamp(1.25rem, -0.23rem + 15vw, 5.625rem);
+  padding-bottom: clamp(1.875rem, -1.534rem + 17.05vw, 11.25rem);
+  // .featured__container
+  &__container {
+  }
+  // .featured__title
+  &__title {
+  }
+  // .featured__box
+  &__box {
+    margin-top: clamp(1.25rem, 0.705rem + 2.73vw, 3.125rem);
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    overflow: auto;
+  }
+  // .featured__item
+  &__item {
+    flex: 0 0 auto;
+  }
+  // .featured__img
+  &__img {
+  }
+}
