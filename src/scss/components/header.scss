@@ -28,10 +28,6 @@ header {
   &__navigation {
     display: flex;
     align-items: center;
-    gap: clamp(1rem, -3.344rem + 9.05vw, 4.688rem);
-    @media (max-width: 1050px) {
-      gap: clamp(1.25rem, -3.295rem + 14.55vw, 6.25rem);
-    }
   }
   // .header__menu
   &__menu {
@@ -40,6 +36,12 @@ header {
   &__buttons {
     display: flex;
     gap: 5px;
+    @media (max-width: 1050px) {
+        margin-right: 60px;
+    }
+    @media (max-width: 400px) {
+        margin-right: 20px;
+    }
   }
   // .header__btn
   &__btn {
@@ -48,11 +50,13 @@ header {
     border: 2px solid var(--color-accent);
     transition: background-color .2s;
     @media (max-width: 350px) {
-      padding: 7px 13px;
+      padding: 7px 12px;
     }
   }
 }
 .menu {
+  margin-right: 67px;
+
   @media (max-width: 1050px) {
     position: absolute;
     top: 0;
@@ -165,7 +169,7 @@ header {
       background-color: var(--color-accent);
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     display:none;
   }
 }
